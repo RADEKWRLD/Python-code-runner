@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python code runner</title>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"></script>
+    <script src="./script.js"></script>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading Pyodide...</div>
+      </div>
+
+    <h1>Python code runner</h1>
+    <textarea id="codeInput"
+        placeholder="Enter your Python code here">print('Hello, world from the browser!')</textarea>
+    <div class="button-container">
+        <button class="runButton" onclick="runPythonCode()">Run</button>
+        <button class="cleanButton" onclick="clearOutput()">Clean</button>
+    </div>
+    <div id="output"></div>
+</body>
+
+</html>
